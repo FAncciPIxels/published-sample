@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinDeck Home Page</title>
+<link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+<body>
+
+
+<!-- use  ///////////// -->
+<!-- &lt;code&gt;  -->
+
+
+
+
+<!-- hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh -->
+<!-- Hero sec -->
+<div class="hero_sec">
+    <!-- hhh nav-logo sec -->
+    <div class="nav_logo_sec ">  
+     
+        <!-- logo  -->
+     <div class="logo"><p><a href="">Coin Tool  </a></p></div>
+
+
+     <!-- nav main sec  -->
+     <nav>
+        <ul>
+            <li><a href="#" class="linked">Invest</a></li>
+            <li><a href="#" class="linked">Plans</a></li>
+            <li><a href="#" class="linked">Demo</a></li>
+            <li><a href="#">Profit</a></li>
+
+        </ul>
+     </nav> 
+     
+     <div class="side_nav_btn"  >
+        <span><i class="bi bi-list" id="sideNavBtn"></i></span>
+     </div>
+</div>
+
+
+
+
+
+
+  <!-- drop-down_menu  -->
+<div class="drop-down_menu">
+       <!-- fist link drop-down_menu  -->
+    <div class="link_first">
+        <ul id="dropFisrtBox">
+            <li><a href="#" class="linked closeDrop">Basic</a></li>
+            <li><a href="#" class="linked closeDrop">Intermediate</a></li>
+            <li><a href="#" class="linked closeDrop">Premium</a></li>
+            <li><a href="#" class="linked closeDrop">Demo</a></li>
+  
+        </ul>
+    </div>
+
+
+    <!-- secon link drop-down_menu  -->
+        <div class="link_second" >
+            <ul id="dropSecondBox">
+                <li><a href="#" class="linked  closeDropdown">Register</a></li>
+                <li><a href="#" class="linked  closeDropdown">Login</a></li>
+            </ul>
+                  </div>
+          </div>
+
+
+
+
+
+
+
+
+
+<!-- hero_entry_text  -->
+<div class="hero_entry_text hero_se">
+  <!-- main hero text box  -->
+<div class="main_h_text">
+    <h1 id="top_h"><span>We</span> are  Making Crypto-Trading <br> an easy experiment </h1>
+    <!-- hero_se -->
+
+    <h3>All around the world Crypto is seen as an asset that  binds Economies and <br> multiply's the resourcefullness
+ <br>of great  <span>markets</span></h3>
+
+<!-- ethereum box  -->
+  <div class="ethereum_display" id="ethAfter">
+  <!-- et img  -->
+    <div class="img_ethereum">
+        <img src="https://cdn-icons-png.flaticon.com/128/6001/6001368.png" alt="">
+    </div>
+
+
+    <h2>Ethereum</h2>
+     <p>We recommend you trade ethereum  in the market this week</p>
+  </div>
+<span>
+  <a href="#" class="linked">Start Investing and earn  <span>&gt; </span> </a>
+
+</span>
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+<!-- last hhhhhhhh div close tag  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- crypto as an ease 2222222222222222222222222222222222222 -->
+
+<div class="cryto_at_ease">
+  <!-- define text  -->
+  <div class="crypto_ease_text" id="crypto_e_t">
+    <h1>Cryp<span>to</span> At Ease</h1>
+    <p>Cointool render the best trading servises to enable an easy and fast trading time</p>
+  <a href="#" class="linked">Start Investing and earn  <span>&gt; </span> </a>
+
+  </div>
+
+    <!-- image cont crypto at ease  -->
+    <div class="image_display_cont" id=" swingBox">
+        <!-- ima full cont  -->
+         <div class="main_img_full_">
+            <div class="image_info">
+                <!-- <p style="color: red; font-size: 40px;">tttttttttttttttttttt</p> -->
+                <table>
+                  <tr>
+                    <td><a href="#" class="coinTable">BITCOIN</a></td>
+                    <td><a href="#"class="coinTable">CFX</a></td>
+                    <td><a href="#" class="coinTable">DOT</a></td>
+                    <td><a href="#" class="coinTable">LTC</a></td>
+                  </tr> 
+                  
+                  <tr>
+                    <td><a href="#" class="coinTable">LINK</a></td>
+                    <td><a href="#" class="coinTable">DOGE</a></td>
+                    <td><a href="#" class="coinTable">FLOW</a></td>
+                    <td><a href="#" class="coinTable">ATOM</a></td>
+                  </tr>
+                </table>
+            </div>
+
+         </div>
+         <!-- ima text sec  -->
+         <div class="image_text">
+            <p>An <span>ease</span> in transaction</p>
+            <h2>There are no limits to success when trading with cointool</h2>
+            
+            <p>Make high, multiple, transactions and see the all-time satisfaction embedded in pour custpmer protection 
+               . We maximize blockchain technology to proove the excense. API's are integrated to ease payment and assessibility.
+            </p>
+
+  <p></p>
+
+            <h3>Trading Time <span><i class="bi bi-alarm-fill"></i></span></h3>
+             <p>Monday <span><i class="bi bi-dash"></i></span>  friday</p>
+             
+  <a href="#" class="linked">Trade now   <span>&gt; </span> </a>
+         </div>
+         <!-- table for top traded crypto  -->
+         <div class="top_traded_crypto">
+            <table>
+              <tr><th>Top traded <span>cryptocurrencies</span></th> </tr>
+              <tr><td>BTC <img src="https://cdn-icons-png.flaticon.com/128/5951/5951455.png" alt="btc"> </td> </tr>
+              <tr><td>ETH      <img src="https://cdn-icons-png.flaticon.com/128/8193/8193808.png" alt="ethe"></td>  </tr>
+              <tr>
+                <td>Tether    <img src="https://cdn-icons-png.flaticon.com/128/825/825508.png" alt="tether"></td>  
+                           </tr>
+              <!-- <tr>
+                <td>Doge     <img src="https://cdn-icons-png.flaticon.com/128/7320/7320825.png" alt="doge"></td>
+
+              </tr> -->
+            </table>
+         </div>
+    </div>
+
+     <!-- crypto a  -->
+    <div class="crypto_see_our_risk_management">
+  <a href="#" class="linked">Take a look at our risk management strategies  <span>&gt; </span> </a>
+    </div>
+          
+</div>
+<!-- final div of image cont  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- how we secure crypto 3333333333333333333333333333333333333333333333333333333 -->
+ <!-- how we secure  -->
+<div class="how_we_secure">
+  <!-- coin sec  -->
+  <div class="coin_security" id="coin_security">
+       <!-- <h1>How Do We Secure The Crypto In Your Wallet</h1> -->
+
+       <!-- <p>We rely on cryptograpyhy to secure all our data.  with Hashing-integrated  methods we generate the best form of data storage and security 
+        Hence fraudulent try's against our users accounts are blocked and there data and crypto asset secured </p> -->
+
+        <!-- <p>secondly, with cryptroeconomics also, we render an equivalent security option too  to optimize our data security.</p> -->
+
+
+<!-- <a href="#"><span>&gt; </span></a> -->
+  </div>
+
+</div>
+<!-- last div of coin security  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 4444444444444444444444444444444444444444444444444444444444444444444 -->
+<!-- the way we mange  -->
+<div class="the_way_we_manage">
+  <!-- twwm image  -->
+  <div class="twwm_image">
+    <div class="top_manager">
+  <p>
+    
+    Victoria Thomas
+     
+    <span>
+      CEO
+    </span>
+  </p>
+    </div>
+    </div>
+
+
+      <!-- twwm how we manage  -->
+    <div class="twwm_how_we_manage" id="the_w_w_manage">
+  <h1>The way we manage <span>Investments </span> <br>     to optmise deals and  <br>    customer base</h1>
+
+  <p>Every company has the etiquettes the run on. We at CoinTool have our's premised on trust around due dilligence. 
+  We have a strict, but  flexible to change,plan on how to go about trading to be able to offer you, effortlessly and smartly
+  that ever-ready digital platform.
+  </p>
+
+
+  <p>Regulatory policies set out by the Government is a priority and we would always abide by
+    them. Being endowed with the responsibility to serve a great emerging market of digital currency
+  </p>
+
+
+
+  <p>Our upgarade and maintenance policy is also top-notch bringing us to speed with new,
+    save technology and trading concepts. This has always brought speed also to ours community
+    of traders.
+  </p>
+
+    <!-- hwm managers  -->
+  <div class="managers">
+    <!-- m one  -->
+     <div class="managersOne managersJs"> 
+    <div class="mOne_image"></div>
+    <h3>Mary Harrison  <span>London</span></h3>
+    <h4><span>Javascript</span> React Lead</h4>
+    </div>
+
+    <!-- m two  -->
+      <div class="managersTwo managersJs">
+        <div class="mTwo_image"></div>
+        <h3>John Moris    <span>Ohio</span></h3>
+      <h4><span>Javascript</span>   React Lead</h4>
+      </div>
+
+      <!-- m there  -->
+      <div class="managersThree managersJs">
+        <div class="mThree_image"></div>
+    <h3>Rose Martins       <span>New York</span></h3>
+<h4><span>PHP</span> SQL Lead</h4>
+      </div>
+
+      <!-- m four  -->
+      <div class="managersFour managersJs">
+        <div class="mFour_image"></div>
+        <h3>George Donald   <span>Wallsall</span></h3>
+        <h4><span>UI</span> UX Lead</h4>
+      </div>
+
+    </div>
+
+
+
+
+  <a href="#" class="linked">See the list of our management board  <span>&gt; </span> </a>
+  </div>
+  
+
+</div>
+<!-- the end of the way we manges  -->
+
+
+
+
+
+
+
+
+
+<!-- 5555555555555555555555555555555555555555555555555555555555555555555555 -->
+<!-- demo and pro  -->
+<div class="demo_pro">
+     <!-- \002B -->
+       <!-- \2212  -->
+  <div class="experience_or_no_experience" id="experience_or_no_experience_animation">  
+    <div class="e_or_no_e_img">
+ <img src="https://cdn-icons-png.flaticon.com/512/7050/7050181.png" alt="trade icon">
+</div>
+ <h1>Trading with or with no <br> <span>experince</span></h1>
+
+ <p>CoinTool has been helping to increase tutorial-based activities to enable new traders scale there 
+  experience. Tradind as a newbie can be frustrating and limiting. We have put in place methods to mitigate against such 
+  limitations.
+ </p>
+
+ <a href="#" class="linked">If you are not a beginner skip the demo     <span>&gt; </span></a>
+  
+</div>
+  
+
+
+
+<!-- exp_no-exp_dropdown -->
+    <div class="exp_no-exp_dropdown" id="exp_dropdown">
+      <button class="exp_no_exp_btn">Learn from our Demo account      </button>
+      <!-- demo_acct_details -->
+      <div class="demo_acct_details" id="demo">
+   <ul>
+    <li>You are about to open a demo account</li>
+    <li>Now you can start with the basics of crypto</li>
+    <li>Keep it as a hubby to ensure consistency </li>
+    <li>Trade with lost envisioned as an inevitable object of discontent and secondary consequences that issue from it</li>
+    <li>A demo accounts profit is not withrawable and hence it can not be transfered or traded in alife account </li>
+    <li> Seek support at this level on a regular basis, from our team to improve your skill</li>
+    <li>Do not see this an an opportunity to be wasteful. Try to trade as if you are on a real account.Optimize it to sharpen your understanding
+      of these currencies   </li>
+   </ul>
+      </div>
+      
+       <button class="exp_no_exp_btn">Start trading as a pro </button>
+       <div class="pro_acct_details" id="pro">
+        <ul>
+          <li>Opt into our daily analyses, as this will help improve your skill</li>
+          <li>We believe you know the basics of trading ,and loses are seen as your doing</li>
+          <li>We recommend you trade widthin the confines of a business mindset </li>
+          <li>Weekly withrawals are allowed and it also helps to deepen your trading capital.Having provided  your registration and payment details, your
+            withdrawal will be approved 
+             </li>
+          <li>Pro accounts have limits which are determined by your experince and liquidty</li>
+          <li>Top assistance and instataneuos responses to issues from cointool is guarnteed</li>
+        </ul>
+       </div>
+    </div>
+
+</div>
+<!-- end div  -->
+
+
+
+
+
+
+
+
+
+<!-- 66666666666666 -->
+<!-- download app  -->
+<div class="download_our_App">
+<div class="App_d" id="downloadApp">
+  <h1> <a href=""><span><i class="bi bi-download"></i></span></a>Download Coin Tool <br> App </h1>
+
+  <p>our App is available for download on Google Play store and Apple App Store </p>
+
+  <p>Download now and start trading with nom limitations. it comes with top features, trading tools, to help you amass that required
+    profit and deal with loss management
+  </p>
+
+  <p>We noticed the need for an easy-to-use trading App.Our engineering team came up with this and rendered this solution.
+    Download now and have that good experience trading as a hubby
+  </p>
+
+  <div class="app_btn">
+    <button><span><i class="bi bi-google-play"></i></span> Download on <br> Google Play</button>
+    <button><span><i class="bi bi-apple"></i></span> Available on the <br> App Store</button>
+
+  </div>
+</div>
+
+
+<!-- our App image  -->
+ <div class="our_app">
+  <img src="app.png" alt="">
+ </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- f00ter lasssssssssssssssssssssssssst -->
+<footer>
+  <!-- best crypto -->
+  <div class="best_crypto_and_countries">
+    <!-- best  -->
+    <div class="best_crypto">
+      <h1>Best crypto to trade</h1>
+
+  <ul>
+    <li><a href="">Bitcoin</a></li>
+    <li><a href="">Link</a></li>
+    <li><a href="">Doge</a></li>
+    <li><a href="">Flow</a></li>
+    <li><a href="">Atom</a></li>
+    <li><a href="">GT</a></li>
+    <li><a href="">BNB</a></li>
+    <li><a href="">USDT</a></li>
+    <li><a href="">LTC</a></li>
+    <li><a href="">Ethereum</a></li>
+   <li><a href="">Tether</a></li>
+   <li><a href="">Polkadot</a></li>
+   <li><a href="">Solana</a></li>
+   <li><a href="">Litecoin</a></li>
+   <li><a href="">Shiba Inu</a></li>
+   <li><a href="">Binace USD</a></li>
+   <li><a href="">Dai</a></li>
+   <li><a href="">Chainlink</a></li>
+   <li><a href="">Cosmos</a></li>
+   <li><a href="">Monero</a></li>
+  </ul>
+    </div>
+
+
+    <!-- countries  -->
+    <div class="countries">
+      <h1>Countries without restrictions</h1>
+      <ul>
+        <li><a href="">United States Of America</a></li>
+        <li><a href="">United Kingdom</a></li>
+        <li><a href="">Norway</a></li>
+        <li><a href="">France</a></li>
+        <li><a href="">Rusia</a></li>
+        <li><a href="">Armenia</a></li>
+        <li><a href="">Mexico</a></li>
+        <li><a href="">Cuba</a></li>
+        <li><a href="">India</a></li>
+        <li><a href="">Germany</a></li>
+        <li><a href="">Spain</a></li>
+        <li><a href="">Canada</a></li>
+        <li><a href="">Uruagua</a></li>
+        <li><a href="">Crotia</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+  <!-- cointool trends  -->
+  <div class="cointoolTrends">
+    <!-- coinlogo -->
+    <div class="coin_footer_logo">
+      <h1>COIN TOOL</h1>
+    </div>
+    <!-- trends  -->
+    <div class="trends">
+  <h1>Weekly Trends</h1>
+  <ul>
+    <li><a href="">Top Profit</a></li>
+    <li><a href="">Market Capital Investments</a></li>
+    <li><a href="">Emerging Markets</a></li>
+    <li><a href="">High Demands</a></li>
+    <li><a href="">Loss Management</a></li>
+    <li><a href="">Trading Capital Scaling</a></li>
+  </ul>
+    </div>
+
+    <!-- navigate  -->
+    <div class="navigate">
+      <h1>Navigate Through</h1>
+      <ul>
+        <li><a href="">Investment</a></li>
+        <li><a href="">Premium</a></li>
+        <li><a href="">Basic</a></li>
+        <li><a href="">Intermediate</a></li>
+        <li><a href="">Demo</a></li>
+        <li><a href="" >Plans</a></li>
+        <li><a href="">Register</a></li>
+        <li><a href="">Login</a></li>
+        <li><a href="" >Profit</a></li>
+      </ul>
+    </div>
+
+
+
+ <!-- contact  -->
+    <div class="contact_section">
+     <div class="f_book"><p>Facebook</p>  <a href=""><img src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png" alt="facebook"></a></div>
+     <div class="li_din"><p>Linkedin</p>    <a href=""><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="linkedin"></a></div>
+     <div class="gmail"><p>Gmial</p>      <a href=""><img src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png" alt="gmail"></a></div>
+     <div class="tw_ter"><p>Twitter</p>   <a href=""><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="twitter"></a></div>
+    </div>
+  </div>
+  
+
+<!-- copyright -->
+  <div class="footer_copyright">
+ <p>
+  <span><i class="bi bi-c-square-fill"></i></span>
+Made By Coin Tool 
+ </p>
+
+  <p>2023</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+<!-- loader  -->
+ <div class="loader" id="loaderParent">
+    <p id="loader">Lo</p>
+
+    <p id="mainLoad" class="loader_word">Loading</p>
+ </div>
+
+
+
+
+ <!-- side hideen nav  -->
+<div class="side_nav" id="sideNav">
+  
+    <ul>
+        <li style="list-style-type:circle !important;"><a href="#" class="linked sideSpan">Invest</a></li>
+        <li><a href="#" class="linked sideSpan">Basic</a></li>
+        <li><a href="#" class="linked sideSpan">Intermediate</a></li>
+        <li><a href="#" class="linked sideSpan">Premium</a></li>
+        <li><a href="#" class="linked sideSpan">Demo</a></li>
+
+  
+        <li style="list-style-type: circle !important;"><a href="#" class="linked sideSpan">Plans</a></li>
+        <li><a href="#" class="linked sideSpan">Register</a></li>
+        <li><a href="#" class="linked  sideSpan">Login</a></li>
+ 
+
+        <li style="list-style-type: circle !important;"><a href="#" class="linked sideSpan">Demo</a></li>
+
+        <li style="list-style-type: circle !important;"><a href="#" class="linked sideSpan">Profit</a></li>
+
+    </ul>
+ 
+   
+</div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
